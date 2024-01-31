@@ -6,12 +6,13 @@
         Console.WriteLine("Welcome to TicTacToe!");
 
         //Create game board array
-        string[] gameBoard = new string[9];
+        char[] gameBoard = new char[9];
         bool WinGame = false;
         int player = 0;
         bool goodChoice = false;
+        int globalChoice = 0;
 
-        //Ask players for their choice & update game board
+        //Ask players for their choice
         while (!WinGame)
         {
             Console.WriteLine("Where would you like to play? Pick a number 1-9.");
@@ -19,8 +20,9 @@
             while (!goodChoice)
             {
                 int choice = Console.ReadLine();
+                bool isInt = int.TryParse(choice, out _);
                 //Check if choice is already used/acceptable
-                if (!choice.IsInt) //figure out how to check if numeric
+                if (!isInt)
                 {
                     Console.WriteLine("Please choose a number between 1 and 9");
                 }
@@ -34,19 +36,28 @@
                 }
                 else
                 {
+                    globalChoice = choice;
                     goodChoice = true;
                 }
             }
+            //Update game board
+            if (player == 0)
+            {
+                gameBoard[(globalChoice - 1)] = 'X';
+            }
+            else
+            {
+                gameBoard[(globalChoice - 1)] = 'O';
+            }
+            //Print board by calling method in TicTacTools
+            printBoard()
+
+            //Check for winner by calling method in TicTacTools & notify players who won
+
         }
 
 
         //Method(choice, gameBoard);
 
-
-        //Ask plaers for their choice & update game board
-
-        //Print board by calling method in TicTacTools
-
-        //Check for winner by calling method in TicTacTools & notify players who won
     }
 }

@@ -10,11 +10,13 @@ internal class Program
         Console.WriteLine("Welcome to TicTacToe!");
 
         //Create game board array
-        char[] gameBoard = new char[9];
+        string[] gameBoard = new string[9];
         bool WinGame = false;
         int player = 0;
         bool goodChoice = false;
         int globalChoice = 0;
+        char X = 'X';
+        char O = 'O';
 
         //Ask players for their choice
         while (!WinGame)
@@ -47,12 +49,12 @@ internal class Program
             //Update game board
             if (player == 0)
             {
-                gameBoard[(globalChoice - 1)] = 'X';
+                gameBoard[(globalChoice - 1)] = X.ToString();
                 tt.winnername(gameBoard);
             }
             else
             {
-                gameBoard[(globalChoice - 1)] = 'O';
+                gameBoard[(globalChoice - 1)] = O.ToString();
                 tt.winnername(gameBoard);
             }
             //Print board by calling method in TicTacTools

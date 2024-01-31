@@ -1,4 +1,8 @@
-﻿internal class Program
+﻿using Assignment4;
+
+TicTacTools tt = new TicTacTools();
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -44,13 +48,15 @@
             if (player == 0)
             {
                 gameBoard[(globalChoice - 1)] = 'X';
+                tt.winnername(gameBoard);
             }
             else
             {
                 gameBoard[(globalChoice - 1)] = 'O';
+                tt.winnername(gameBoard);
             }
             //Print board by calling method in TicTacTools
-            printBoard()
+            tt.printBoard(gameBoard); //check this
 
             //Check for winner by calling method in TicTacTools & notify players who won
 

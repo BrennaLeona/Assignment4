@@ -8,5 +8,16 @@ namespace Assignment4
 {
     internal class TicTacTools
     {
+
+        public void printBoard()//gameBoard array as param
+        {
+
+        }
+
+        public void winnerName()
+        {
+
+        }
+
     }
 }

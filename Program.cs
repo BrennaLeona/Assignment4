@@ -5,8 +5,8 @@
         Console.WriteLine("Welcome to TicTacToe!"); //Welcome the user
 
         //Create game board array
-
-        //Ask plaers for their choice & update game board
+        string[] gameBoard = new string[9];
+        //Ask players for their choice & update game board
 
         //Print board by calling method in TicTacTools
 

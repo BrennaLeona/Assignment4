@@ -2,11 +2,15 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to TicTacToe!"); //Welcome the user
+        //Welcome the user
+        Console.WriteLine("Welcome to TicTacToe!");
 
         //Create game board array
 
-        //Ask plaers for their choice & update game board
+        //Ask players for their choice & update game board
+        Console.WriteLine("Where would you like to play? Pick a number 1-9.");
+        int choice = Console.ReadLine();
+
 
         //Print board by calling method in TicTacTools
 

@@ -61,8 +61,6 @@ internal class Program
             //Check for winner by calling method in TicTacTools & notify players who won
 
         }
-
-        //Method(choice, gameBoard);
-
+        Console.WriteLine(f"Player {playername} won! Thanks for playing!");
     }
 }

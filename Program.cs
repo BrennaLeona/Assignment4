@@ -28,7 +28,7 @@
                 {
                     Console.WriteLine("Please choose a number between 1 and 9");
                 }
-                else if (gameBoard[(choice - 1)].Contains("X") | (gameBoard[choice - 1].Contains("O"))
+                else if (gameBoard[(choice - 1)].Contains("X") | (gameBoard[choice - 1].Contains("O")))
                 {
                     Console.WriteLine("That spot is already taken, please select another spot.");
                 }

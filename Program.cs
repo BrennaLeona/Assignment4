@@ -1,15 +1,16 @@
 ﻿using Assignment4;
 
-TicTacTools tt = new TicTacTools();
 
 internal class Program
 {
     private static void Main(string[] args)
     {
+        TicTacTools tt = new TicTacTools();
+
         //Welcome the user
         Console.WriteLine("Welcome to TicTacToe!");
 
-        //Create game board array
+        //Create game board array and other variables
         string[] gameBoard = new string[9];
         bool WinGame = false;
         int player = 0;
@@ -17,6 +18,7 @@ internal class Program
         int globalChoice = 0;
         char X = 'X';
         char O = 'O';
+        int winner = 0;
 
         //Ask players for their choice
         while (!WinGame)
@@ -63,6 +65,6 @@ internal class Program
             //Check for winner by calling method in TicTacTools & notify players who won
 
         }
-        Console.WriteLine(f"Player {playername} won! Thanks for playing!");
+        Console.WriteLine("Player {winner} won! Thanks for playing!");
     }
 }

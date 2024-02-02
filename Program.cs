@@ -27,8 +27,8 @@ internal class Program
 
             while (!goodChoice)
             {
-                int choice = Console.ReadLine();
-                bool isInt = int.TryParse(choice, out _);
+                int choice = int.Parse(Console.ReadLine());
+                bool isInt = int.TryParse(Console.ReadLine(), out int parsedValue);
                 //Check if choice is already used/acceptable
                 if (!isInt)
                 {

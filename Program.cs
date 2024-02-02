@@ -18,7 +18,6 @@ internal class Program
         int globalChoice = 0;
         char X = 'X';
         char O = 'O';
-        int winner = 0;
 
         //Ask players for their choice
         while (!WinGame)

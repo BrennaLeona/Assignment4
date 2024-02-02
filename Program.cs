@@ -6,6 +6,7 @@ internal class Program
     {
         TicTacTools tt = new TicTacTools();
         Console.WriteLine("Welcome to TicTacToe!");
+
         // Initialize game board with placeholders indicating the position numbers
         string[] gameBoard = new string[9];
         for (int i = 0; i < gameBoard.Length; i++)
@@ -25,6 +26,8 @@ internal class Program
             {
                 string input = Console.ReadLine();
                 bool isInt = int.TryParse(input, out int choice);
+
+                //Checks for correct inputs
                 if (!isInt || choice < 1 || choice > 9)
                 {
                     Console.WriteLine("Please choose a number between 1 and 9.");
@@ -39,10 +42,12 @@ internal class Program
                     goodChoice = true;
                 }
             }
+
             // Update game board
             gameBoard[globalChoice - 1] = player == 0 ? "X" : "O";
             turns++; // Increment turns after each valid move
-                     // Check for winner
+
+            // Check for winner
             string winner = tt.GetWinner(gameBoard);
             if (winner != null)
             {

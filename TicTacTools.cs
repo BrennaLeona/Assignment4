@@ -18,10 +18,41 @@ namespace Assignment4
             Console.WriteLine($" {gameBoard[6]} | {gameBoard[7]} | {gameBoard[8]} ");
         }
 
-        public void winnerName()
+        public string GetWinner(string[] gameBoard)
         {
+            
+            for (int i = 0; i < 9; i += 3)
+            {
+                if (gameBoard[i] == gameBoard[i + 1] && gameBoard[i + 1] == gameBoard[i + 2])
+                {
+                    return gameBoard[i];
+                }
+            }
 
+            
+            for (int i = 0; i < 3; i++)
+            {
+                if (gameBoard[i] == gameBoard[i + 3] && gameBoard[i + 3] == gameBoard[i + 6])
+                {
+                    return gameBoard[i];
+                }
+            }
+
+           
+            if (gameBoard[0] == gameBoard[4] && gameBoard[4] == gameBoard[8])
+            {
+                return gameBoard[0];
+            }
+            if (gameBoard[2] == gameBoard[4] && gameBoard[4] == gameBoard[6])
+            {
+                return gameBoard[2];
+            }
+
+            // if no winner
+            return null;
         }
 
     }
+
 }
+    
